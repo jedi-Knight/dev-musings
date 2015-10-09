@@ -1,12 +1,12 @@
 <h1 id="giving-download-access-to-user-folders-in-aws-s3">Giving download access to user folders in AWS S3</h1>
 <h3 id="1-log-on-to-your-aws-management-console-at-console-aws-com-and-go-to-the-s3-dashboard">1. Log on to your AWS Management Console at console.aws.com and go to the S3 Dashboard</h3>
-<p>&lt;img src=&quot;img/1.png&quot; height=&quot;360px&quot;/&gt;</p>
+<img src="img/1.png" height="360px"/>
 <h3 id="2-click-on-services-on-the-top-left-of-the-dashboard-and-goto-security-and-identity-iam-">2. Click on <code>Services</code> on the top-left of the dashboard and goto <code>Security And Identity &gt; IAM</code></h3>
-<p>&lt;img src=&quot;img/2.png&quot; height=&quot;360px&quot;/&gt;</p>
+<img src="img/2.png" height="360px"/>
 <h3 id="3-using-the-navigation-pane-on-the-left-goto-policies-then-click-create-policy-">3. Using the navigation pane on the left, goto <code>Policies</code>. Then Click <code>Create Policy</code></h3>
-<p>&lt;img src=&quot;img/3.png&quot; height=&quot;360px&quot;/&gt;</p>
+<img src="img/3.png" height="360px"/>
 <h3 id="4-select-create-you-own-policy-">4. Select <code>Create you own policy</code>.</h3>
-<p>&lt;img src=&quot;img/4.png&quot; height=&quot;360px&quot;/&gt;</p>
+<img src="img/4.png" height="360px"/>
 <h3 id="5-give-the-policy-a-name-such-as-download-access-to-user-folder-and-paste-the-following-code-into-the-policy-document-field-">5.Give the policy a name such as <code>download-access-to-user-folder</code>, and paste the following code into the <code>Policy Document</code> field:</h3>
 <pre><code>{
   &quot;Version&quot;:&quot;2012-10-17&quot;,
@@ -46,16 +46,16 @@
     }
   ]
 }
-</code></pre><p>&lt;img src=&quot;img/5.png&quot; height=&quot;360px&quot;/&gt;</p>
+</code></pre><img src="img/5.png" height="360px"/>
 <h3 id="6-now-create-a-user-">6. Now create a User:</h3>
 <h4 id="1-using-the-navigation-pane-on-the-left-goto-users-click-create-a-new-user-and-fill-in-the-username-s-click-create-">1. Using the navigation pane on the left, goto <code>Users</code>, click <code>Create a new user</code> and fill in the username(s). Click <code>Create</code>.</h4>
-<p>&lt;img src=&quot;img/6.png&quot; height=&quot;360px&quot;/&gt;</p>
+<img src="img/6.png" height="360px"/>
 <h4 id="2-click-download-the-access-keys-and-store-the-csv-file-downloaded-in-a-safe-place-">2. Click <code>Download the Access Keys</code> and store the csv file downloaded in a safe place.</h4>
-<p>&lt;img src=&quot;img/7.png&quot; height=&quot;360px&quot;/&gt;</p>
+<img src="img/7.png" height="360px"/>
 <h3 id="7-now-create-a-group-">7. Now create a Group:</h3>
 <h4 id="1-using-the-navigation-pane-on-the-left-goto-group-and-click-create-a-new-group-give-a-name-to-the-group-eg-users-">1. Using the navigation pane on the left, goto <code>Group</code> and click <code>Create a New Group</code>. Give a name to the group: eg. <code>users</code>.</h4>
-<p>&lt;img src=&quot;img/8.png&quot; height=&quot;360px&quot;/&gt;</p>
+<img src="img/8.png" height="360px"/>
 <h4 id="2-now-attach-the-policy-you-just-created-to-the-group-">2. Now attach the policy you just created to the group.</h4>
-<p>&lt;img src=&quot;img/9.png&quot; height=&quot;360px&quot;/&gt;</p>
+<img src="img/9.png" height="360px"/>
 <h3 id="8-smile-">8. Smile :)</h3>
 <p>Now the user has download access to the contents of the folder that matches the path <code>/user-name/</code>. The same policy will be applied to any user added to this group.</p>
