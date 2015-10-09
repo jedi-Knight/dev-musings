@@ -14,44 +14,44 @@ Giving download access to user folders in AWS S3
 <img src="img/4.png" height="360px"/>
 
 ###5.Give the policy a name such as `download-access-to-user-folder`, and paste the following code into the `Policy Document` field:
-    <p>{
-  "Version":"2012-10-17",
-  "Statement": [
     {
-      "Sid": "ForBucketListTraverse",
-      "Action": ["s3:ListAllMyBuckets", "s3:GetBucketLocation"],
-      "Effect": "Allow",
-      "Resource": ["arn:aws:s3:::*"]
-    },
-    {
-      "Sid": "ForRootDirectoryTraverse",
-      "Action": ["s3:ListBucket"],
-      "Effect": "Allow",
-      "Resource": ["arn:aws:s3:::bucket-name"],
-      "Condition":{"StringEquals":{"s3:prefix":[""],"s3:delimiter":["/"]}}
-    },
-    {
-      "Sid": "ForListingContentsOfUserFolders",
-      "Action": ["s3:ListBucket"],
-      "Effect": "Allow",
-      "Resource": ["arn:aws:s3:::bucket-name"],
-      "Condition":{"StringLike":{"s3:prefix":["${aws:username}/*"]}}
-    },
-    {
-       "Sid": "EnableDownloadAccessOnUserFolder",
-       "Action":[
-                "s3:GetObject",
-                "s3:GetObjectAcl",
-                "s3:GetObjectTorrent",
-                "s3:GetObjectVersion",
-                "s3:GetObjectVersionAcl",
-                "s3:GetObjectVersionTorrent"
-                ],
-       "Effect":"Allow",
-       "Resource": ["arn:aws:s3:::bucket-name/${aws:username}/*"]
+      "Version":"2012-10-17",
+      "Statement": [
+        {
+          "Sid": "ForBucketListTraverse",
+          "Action": ["s3:ListAllMyBuckets", "s3:GetBucketLocation"],
+          "Effect": "Allow",
+          "Resource": ["arn:aws:s3:::*"]
+        },
+        {
+          "Sid": "ForRootDirectoryTraverse",
+          "Action": ["s3:ListBucket"],
+          "Effect": "Allow",
+          "Resource": ["arn:aws:s3:::bucket-name"],
+          "Condition":{"StringEquals":{"s3:prefix":[""],"s3:delimiter":["/"]}}
+        },
+        {
+          "Sid": "ForListingContentsOfUserFolders",
+          "Action": ["s3:ListBucket"],
+          "Effect": "Allow",
+          "Resource": ["arn:aws:s3:::bucket-name"],
+          "Condition":{"StringLike":{"s3:prefix":["${aws:username}/*"]}}
+        },
+        {
+           "Sid": "EnableDownloadAccessOnUserFolder",
+           "Action":[
+                    "s3:GetObject",
+                    "s3:GetObjectAcl",
+                    "s3:GetObjectTorrent",
+                    "s3:GetObjectVersion",
+                    "s3:GetObjectVersionAcl",
+                    "s3:GetObjectVersionTorrent"
+                    ],
+           "Effect":"Allow",
+           "Resource": ["arn:aws:s3:::bucket-name/${aws:username}/*"]
+        }
+      ]
     }
-  ]
-}</p>
 <img src="img/5.png" height="360px"/>
 
 ###6. Now create a User:
