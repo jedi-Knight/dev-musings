@@ -2,16 +2,16 @@ Giving download access to user folders in AWS S3
 ================================================
 
 ###1. Log on to your AWS Management Console at console.aws.com and go to the S3 Dashboard
-<img src="img/1.png" height="160px"/>
+<img src="img/1.png" height="360px"/>
 
 ###2. Click on `Services` on the top-left of the dashboard and goto `Security And Identity > IAM`
-!(img/2.png)
+<img src="img/2.png" height="360px"/>
 
 ###3. Using the navigation pane on the left, goto `Policies`. Then Click `Create Policy`
-!(img/3.png)
+<img src="img/3.png" height="360px"/>
 
 ###4. Select `Create you own policy`.
-!(img/4.png)
+<img src="img/4.png" height="360px"/>
 
 ###5.Give the policy a name such as `download-access-to-user-folder`, and paste the following code into the `Policy Document` field:
 *
@@ -54,19 +54,19 @@ Giving download access to user folders in AWS S3
   ]
 }
 *
-!(img/5.png)
+<img src="img/5.png" height="360px"/>
 
 ###6. Now create a User:
 ####1. Using the navigation pane on the left, goto `Users`, click `Create a new user` and fill in the username(s). Click `Create`.
-!(img/6.png)
+<img src="img/6.png" height="360px"/>
 ####2. Click `Download the Access Keys` and store the csv file downloaded in a safe place.
-!(img/7.png)
+<img src="img/7.png" height="360px"/>
 
 ###7. Now create a Group:
 ####1. Using the navigation pane on the left, goto `Group` and click `Create a New Group`. Give a name to the group: eg. `users`.
-!(img/8.png)
+<img src="img/8.png" height="360px"/>
 ####2. Now attach the policy you just created to the group.
-!(img/9.png)
+<img src="img/9.png" height="360px"/>
 
 ###8. Smile :)
 Now the user has download access to the contents of the folder that matches the path `/user-name/`. The same policy will be applied to any user added to this group.
