@@ -14,7 +14,7 @@ Giving download access to user folders in AWS S3
 <img src="img/4.png" height="360px"/>
 
 ###5.Give the policy a name such as `download-access-to-user-folder`, and paste the following code into the `Policy Document` field:
-<p>{
+    <p>{
   "Version":"2012-10-17",
   "Statement": [
     {
@@ -51,7 +51,7 @@ Giving download access to user folders in AWS S3
        "Resource": ["arn:aws:s3:::bucket-name/${aws:username}/*"]
     }
   ]
-}</p>\s\s
+}</p>
 <img src="img/5.png" height="360px"/>
 
 ###6. Now create a User:
