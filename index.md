@@ -2,7 +2,7 @@ Giving download access to user folders in AWS S3
 ================================================
 
 ###1. Log on to your AWS Management Console at console.aws.com and go to the S3 Dashboard
-<img src="img/1.png"/>
+<img src="img/1.png" height="160px"/>
 
 ###2. Click on `Services` on the top-left of the dashboard and goto `Security And Identity > IAM`
 !(img/2.png)
