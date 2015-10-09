@@ -66,7 +66,7 @@ Giving download access to user folders in AWS S3
 ####2. Now attach the policy you just created to the group.
 <img src="img/9.png" height="360px"/>
 
-###8. Smile :)
+###8. Done!
 Now the user has download access to the contents of the folder that matches the path `/user-name/`. The same policy will be applied to any user added to this group.
 
 
