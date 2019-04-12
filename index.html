@@ -1,12 +1,28 @@
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900,900italic,700,600,400italic,300,300italic' rel='stylesheet' type='text/css'>
-<style>
-  body{
-   font-family: "Source Sans Pro", "Verdana", sans-serif;
-  }
-  div.container{
-    margin: 6% 20%;
-  }
-</style>
+<!DOCTYPE html>
+<head>
+
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900,900italic,700,600,400italic,300,300italic' rel='stylesheet' type='text/css'>
+  <style>
+    body{
+    font-family: "Source Sans Pro", "Verdana", sans-serif;
+    }
+    div.container{
+      margin: 6% 20%;
+    }
+  </style>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89387239-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-89387239-3');
+  </script>
+
+</head>
+<body>
 <div class="container">
 <h1 id="giving-download-access-to-user-folders-in-aws-s3">Giving download access to user folders in AWS S3</h1>
 <h3 id="1-log-on-to-your-aws-management-console-at-console-aws-com-and-go-to-the-s3-dashboard">1. Log on to your AWS Management Console at console.aws.com and go to the S3 Dashboard</h3>
@@ -70,4 +86,4 @@
 <h3 id="8-smile-">8. Done!</h3>
 <p>Now the user has download access to the contents of the folder that matches the path <code>/user-name/</code>. The same policy will be applied to any user added to this group.</p>
 </div>
-
+</body>
